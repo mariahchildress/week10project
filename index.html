@@ -5,41 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite Disneyland Resort Rides</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+
+<!--you need 3 input fields and a button to add the row to the table--> 
 <body class="container">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm">
-                <div class="form-group">
-                    <label for="new-park">Park</label>
-                    <input type="text" class="form-control" id="park">
+    <br>
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="favorite-ride">Favorite Ride</label>
+                        <input type="ride" class="form-control" id="favorite-ride">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="park">Park Where the Ride is Located</label>
+                        <input type="park" class="form-control" id="park">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <input type="priority" class="form-control" id="priority">
+                    </div>
                 </div>
             </div>
-            <div class="col-sm">
-                <div class="form-group">
-                    <label for="new-ride">Ride</label>
-                    <input type="text" class="form-control" id="ride">
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="form-group">
-                    <label for="new-priority">Priority</label>
-                    <input type="text" class="form-control" id="priority">
-                </div>
+            <div>
+                <button id="add" class="btn-primary form-control">Add to the List!</button>
             </div>
         </div>
     </div>
-    <div>
-        <button id="add" class="btn-primary form-control">Create</button>
-    </div>
-    <table id="list" class="table table-light table striped">
+    <!--need table headings in this order: priority, ride, park-->
+    <table id="list" class="table table-light table-striped">
         <tr>
-            <th>Park</th>
-            <th>Ride</th>
             <th>Priority</th>
+            <th>Ride</th>
+            <th>Park</th>
         </tr>
     </table>
-
 
     <script src="index.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
