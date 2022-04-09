@@ -10,17 +10,3 @@ document.getElementById('add').addEventListener('click' , () => {
     row.insertCell(2).innerHTML = document.getElementById('new-ride').value;
     row.insertCell(3).innerHTML = document.getElementById('new-park').value;
 });
-
-function createDeleteButoon(id) {
-    let btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.id = iod;
-    btn.innerHTML = 'Delete';
-    btn.onclick = () => {
-        console.log(`Deleting row with id: test-${id}`);
-        let elementToDelete = document.getElementById(`test-${id}`);
-        elementToDelete.parentNode.removeChild(elementToDelete);
-    }
-    return btn;
-}
-
