@@ -16,23 +16,23 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <input type="priority" class="form-control" id="new-priority">
+                    </div>
+                </div>
+            </div>
+                <div class="col-sm">
+                    <div class="form-group">
                         <label for="favorite-ride">Favorite Ride</label>
-                        <input type="ride" class="form-control" id="favorite-ride">
+                        <input type="ride" class="form-control" id="new-ride">
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="park">Park Where the Ride is Located</label>
-                        <input type="park" class="form-control" id="park">
+                        <input type="park" class="form-control" id="new-park">
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label for="priority">Priority</label>
-                        <input type="priority" class="form-control" id="priority">
-                    </div>
-                </div>
-            </div>
             <div>
                 <button id="add" class="btn-primary form-control">Add to the List!</button>
             </div>
@@ -41,6 +41,7 @@
     <!--need table headings in this order: priority, ride, park-->
     <table id="list" class="table table-light table-striped">
         <tr>
+            <th>Date Created</th>
             <th>Priority</th>
             <th>Ride</th>
             <th>Park</th>
